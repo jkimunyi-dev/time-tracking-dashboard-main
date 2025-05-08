@@ -1,0 +1,22 @@
+/* :root{} */
+
+/* Universal styling */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	color: white;
+	background-color: var(--navy-950);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
