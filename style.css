@@ -184,3 +184,33 @@ body {
 	color: white;
   }
   
+
+  .work .activity-header {
+	background-color: var(--orange-300);
+	background-image: url('images/icon-work.svg');
+  }
+  
+  .play .activity-header {
+	background-color: var(--blue-300);
+	background-image: url('images/icon-play.svg');
+  }
+  
+  .study .activity-header {
+	background-color: var(--pink-400);
+	background-image: url('images/icon-study.svg');
+  }
+  
+  .exercise .activity-header {
+	background-color: var(--green-400);
+	background-image: url('images/icon-exercise.svg');
+  }
+  
+  .social .activity-header {
+	background-color: var(--purple-700);
+	background-image: url('images/icon-social.svg');
+  }
+  
+  .self-care .activity-header {
+	background-color: var(--yellow-300);
+	background-image: url('images/icon-self-care.svg');
+  }
