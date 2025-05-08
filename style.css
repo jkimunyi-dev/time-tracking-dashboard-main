@@ -214,3 +214,15 @@ body {
 	background-color: var(--yellow-300);
 	background-image: url('images/icon-self-care.svg');
   }
+
+  .attribution {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 2rem;
+	color: var(--navy-200);
+  }
+  
+  .attribution a {
+	color: var(--purple-600);
+	text-decoration: none;
+  }
