@@ -14,14 +14,14 @@
 	--purple-500: hsl(235, 45%, 61%);  /* Inactive tabs */
 	--navy-200: hsl(236, 100%, 87%);   /* Previous hours text */
   }
-
-*{
+  
+  * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
 	font-family: 'Rubik', sans-serif;
 	font-size: 18px;
 	font-weight: 300;
@@ -32,25 +32,24 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.container {
+  }
+  
+  .container {
 	width: 100%;
 	max-width: 1110px;
 	margin: 2rem auto;
 	padding: 0 1.5rem;
-}
-
-.dashboard{
+  }
+  
+  .dashboard {
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	gap: 1rem;
-}
-
-
-/* Profile Card */
-.profile-card {
+	gap: 1.5rem;
+  }
+  
+  /* Profile Card */
+  .profile-card {
 	background-color: var(--navy-900);
 	border-radius: 15px;
 	grid-row: span 2;
@@ -116,75 +115,77 @@ body {
 	color: white;
   }
   
-
-/* Profile Card */
-.profile-card {
-	background-color: var(--navy-900);
+  /* Activity Cards */
+  .activity-card {
+	position: relative;
 	border-radius: 15px;
-	grid-row: span 2;
 	overflow: hidden;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
   
-  .profile-info {
-	background-color: var(--purple-600);
-	padding: 2rem;
+  .activity-header {
+	height: 45px;
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: 90% -10px;
+  }
+  
+  .activity-content {
+	background-color: var(--navy-900);
+	padding: 1.5rem;
 	border-radius: 15px;
 	position: relative;
-	z-index: 1;
+	top: -15px;
+	height: calc(100% - 30px);
+	transition: background-color 0.3s ease;
   }
   
-  .profile-image {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
-	border: 3px solid white;
-	overflow: hidden;
-	margin-bottom: 2rem;
+  .activity-content:hover {
+	background-color: hsl(235, 46%, 30%);
+	cursor: pointer;
   }
   
-  .profile-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  .activity-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.5rem;
   }
   
-  .report-for {
-	color: var(--navy-200);
-	font-size: 0.9rem;
+  .activity-title h2 {
+	font-size: 18px;
+	font-weight: 500;
+  }
+  
+  .menu-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .menu-btn svg path {
+	transition: fill 0.3s ease;
+  }
+  
+  .menu-btn:hover svg path {
+	fill: white;
+  }
+  
+  .activity-time .current-time {
+	font-size: 3rem;
+	font-weight: 300;
 	margin-bottom: 0.5rem;
   }
   
-  .profile-name {
-	font-weight: 300;
-	font-size: 2rem;
-	line-height: 1.2;
+  .activity-time .previous-time {
+	font-size: 0.9rem;
+	color: var(--navy-200);
   }
   
-  .time-period {
-	padding: 1.5rem 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-  }
-  
-  .period-btn {
-	background: none;
-	border: none;
-	color: var(--purple-500);
-	font-family: 'Rubik', sans-serif;
-	font-size: 1rem;
-	cursor: pointer;
-	padding: 0.5rem 0;
-	transition: color 0.3s ease;
-  }
-  
-  .period-btn:hover,
-  .period-btn.active {
-	color: white;
-  }
-  
-
+  /* Activity specific colors */
   .work .activity-header {
 	background-color: var(--orange-300);
 	background-image: url('images/icon-work.svg');
@@ -214,7 +215,8 @@ body {
 	background-color: var(--yellow-300);
 	background-image: url('images/icon-self-care.svg');
   }
-
+  
+  /* Attribution */
   .attribution {
 	font-size: 11px;
 	text-align: center;
@@ -226,10 +228,9 @@ body {
 	color: var(--purple-600);
 	text-decoration: none;
   }
-
-
-/* Media Queries */
-@media screen and (max-width: 1023px) {
+  
+  /* Media Queries */
+  @media screen and (max-width: 1023px) {
 	.dashboard {
 	  grid-template-columns: repeat(3, 1fr);
 	}
